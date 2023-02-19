@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../components/layout/Layout';
 
-const Help = () => {
+ const Help = () => {
+    const [name,setName]=useState('asif')
+const data=[{
+    name:'Abdullah turkey',
+    email:'abdulla@gmail.com'
+},
+    {name:'najmul',
+    email:'najmul@gmail.com'
+},
+   { name:'ridoy',
+    email:'ridoy@gmail.com'
+},
+{
+    name:'naim',
+    email:"naim@gmail.com"
+}
+]
+// const data=[]
+    
     return (
         <div>
             <Layout>
-                <h1>Helping Page</h1>
+              {name ? <h1>Hello {name}</h1>: <h1>Hello Guest</h1>}
+  {data.length>0? <ul>
+    {data.map(item=><li>{item.name},{item.email}</li>)}
+        
+    </ul>:<h1>There is No Data</h1>}
             </Layout>
         </div>
     );
