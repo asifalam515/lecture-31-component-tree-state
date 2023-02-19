@@ -33,9 +33,10 @@
   .navItem{
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
   }
-  .mavItemActive{
-    color: #f00;
+  .navItemActive{
+    color: red;
     font-weight: bold;
     text-decoration: none;
   }
